@@ -1,5 +1,7 @@
 # White Marigold » Take-Home Project for Software Engineer Candidates
 
+![Screenshot](bays.png)
+
 ## WMC.doc and WMC ReadMe.doc have more detailed information. Wampserver should work out of the box.
 
 ## Download Link to Wampserver
