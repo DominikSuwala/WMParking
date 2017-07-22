@@ -7,7 +7,7 @@
 			$this->kafka_port = '';
 			$this->kafka_client = null;
 		}
-		function htmlpage($data) {
+		function htmlpage($data, $total) {
 			return <<<html
 	<html>
 	<title>White Marigold Capital Technical - Car Bays</title>
@@ -51,7 +51,7 @@
 
 	<!-- HTML -->
 	<div id="refreshchart" align="center" >
-		<h1>Bay Occupancy</h1>
+		<h1 id="occupancy">Bay Occupancy: {$total}</h1>
 			<div style="width:50%;" id="chartdiv">
 				<script>
 			var chart = AmCharts.makeChart("chartdiv", {

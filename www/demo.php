@@ -33,6 +33,7 @@
 	);
 	$mydata = array();
 	$row = 0;
+	$total = 0;
 	foreach($allRows as $k => $v) {
 		$mydata[] = array(
 			"bay" => $v[0], 
@@ -40,7 +41,8 @@
 			"color" => $colors[$mywmc->chooseColor2($row, $thresholds)]
 			#"color" => $colors[$mywmc->chooseColor($v[1], $thresholds)]
 		);
+		$total += $v[1];
 		$row++;
 	}
 	
-	echo $mywmc->htmlpage(json_encode($mydata));
+	echo $mywmc->htmlpage(json_encode($mydata), $total);
