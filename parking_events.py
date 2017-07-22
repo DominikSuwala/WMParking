@@ -66,8 +66,8 @@ def main():
 	visits = open('visits.sql', 'w+')
 	#print sqlDump(curBay, curTime)
 	
-	for i in range(1, 50000):
-		curBay = random.randrange(1, 200)
+	for i in range(1, iterations):
+		curBay = random.randrange(1, baysize)
 		curTime += int(random.randrange(250,600))
 		# Make this exitable in exitMod iterations
 		f.write(sqlDump(curBay, curTime))
